@@ -120,7 +120,7 @@ static NSStringEncoding const kAFRestClientStringEncoding = NSUTF8StringEncoding
     
 	[request setURL:url];
 	[request setHTTPMethod:method];
-	[request setHTTPShouldHandleCookies:NO];
+	[request setHTTPShouldHandleCookies:YES]; // hector - we want cookies to be handled, since we are maintaining a http session through out the app's lifecycle. Maybe we should switch to non-REST subclass.
 	[request setAllHTTPHeaderFields:headers];
     
 	return request;
