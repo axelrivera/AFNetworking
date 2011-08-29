@@ -1,6 +1,8 @@
-# fork
+## hramos fork
 
-This is a temporary fork: at the moment, I am not able to change the server's response content type to 'application/json'. This fork removes this check, until the backend can be corrected. Hackish, I know, but out of our control.
+This is a temporary fork: at the moment, I am not able to change the server's response content type to 'application/json'. This fork removes this check, until the backend can be corrected. Hackish, I know, but out of our control. -hector
+
+This fork also uses Latin-1 for its text encoding.
 
 # AFNetworking
 ## A delightful iOS networking library with NSOperations and block-based callbacks

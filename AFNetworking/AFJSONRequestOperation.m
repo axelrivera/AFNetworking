@@ -67,6 +67,7 @@ static dispatch_queue_t json_request_operation_processing_queue() {
         if (!error) {
             BOOL statusCodeAcceptable = [acceptableStatusCodes containsIndex:[response statusCode]];
             BOOL contentTypeAcceptable = [acceptableContentTypes containsObject:[response MIMEType]];
+            NSLog(@"Response: %@", [response MIMEType]);
             if (!statusCodeAcceptable || !contentTypeAcceptable) {
                 NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
                 [userInfo setValue:[NSHTTPURLResponse localizedStringForStatusCode:[response statusCode]] forKey:NSLocalizedDescriptionKey];
@@ -119,7 +120,7 @@ static dispatch_queue_t json_request_operation_processing_queue() {
 }
 
 + (NSSet *)defaultAcceptableContentTypes {
-    return [NSSet setWithObjects:@"application/json", @"application/x-javascript", @"text/javascript", @"text/x-javascript", @"text/x-json", @"text/json", @"text/plain", nil];
+    return [NSSet setWithObjects:@"application/json", @"application/x-javascript", @"text/javascript", @"text/x-javascript", @"text/x-json", @"text/json", @"text/plain", @"text/html", nil];
 }
 
 @end
