@@ -1,3 +1,7 @@
+# fork
+
+This is a temporary fork: at the moment, I am not able to change the server's response content type to 'application/json'. This fork removes this check, until the backend can be corrected. Hackish, I know, but out of our control.
+
 # AFNetworking
 ## A delightful iOS networking library with NSOperations and block-based callbacks
 ### There's a lot to be said for a networking library that you can wrap your head around. API design matters, too. Code at its best is poetry, and should be designed to delight (but never surprise).
